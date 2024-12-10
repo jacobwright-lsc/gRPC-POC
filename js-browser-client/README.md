@@ -10,6 +10,9 @@
 ### Compilation and Packaging
 1. Generate proto files
     1. protoc -I=. hello.proto --js_out=import_style=commonjs:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
+    1. I used to have a local proto file here but I want to direct to the one in the Server project "../grpc-poc/Protos/hello.proto"
+    1. protoc -I=. ../grpc-poc/Protos/hello.proto --js_out=import_style=commonjs:. --grpc-web_out=import_style=commonjs,mode=grpcwebtext:.
+    1. I haven't tested this ^ yet
 1. npm i
 1. npx webpack ./client.js
 
